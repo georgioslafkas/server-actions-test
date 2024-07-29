@@ -14,6 +14,14 @@
     --background-start-rgb: 0, 0, 0;
     --background-end-rgb: 0, 0, 0;
   }
+
+  body {
+    color: white;
+  }
+
+  input[type=text] {
+    color: black;
+  }
 }
 
 body {
