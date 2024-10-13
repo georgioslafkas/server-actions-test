@@ -54,8 +54,7 @@ export default async function Home() {
     revalidatePath("/");
   };
 
-  // const students = await prisma.student.findMany();
-  const students: any = [];
+  const students = await prisma.student.findMany();
 
   return (
     <main className="flex min-h-screen gap-8 flex-col items-center justify-between p-24">
@@ -78,7 +77,7 @@ export default async function Home() {
       </div>
       <div className="z-10 max-w-5xl items-start justify-start font-mono text-sm lg:flex">
         <ul>
-          {students.map((student: any) => (
+          {students.map((student) => (
             <li key={student.id} className="flex flex-row">
               <span>
                 {student.name} - {student.grade}
